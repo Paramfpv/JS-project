@@ -1,32 +1,77 @@
-button {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    border-radius: 8px;
-    background-color: #4CAF50;
-    color: white;
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    background-color: #444;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-size: 48px;
+    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #eaeaea;
+}
+
+.x {
+    color: #e74c3c;
+}
+
+.o {
+    color: #3498db;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 button:hover {
-    filter: brightness(90%);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-button:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    transition: background-color 0.5s ease;
+    background-color: #2980b9;
 }
